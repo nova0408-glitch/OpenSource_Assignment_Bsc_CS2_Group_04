@@ -64,7 +64,7 @@ The system includes a full **user management module** with role-based access (Ad
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/nova0408-glitch/OpenSource_Assignment_ComputerScience_Group1.git
+   git clone https://github.com/nova0408-glitch/OpenSource_Assignment_Bsc_CS2_Group_04.git
    ```
 
 2. **Move the project to your server root**
