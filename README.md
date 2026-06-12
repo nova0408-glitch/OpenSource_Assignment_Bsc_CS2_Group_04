@@ -130,7 +130,7 @@ git init
 # Stage all files
 git add .
 
-# Create commits with meaningful messages
+# Commits
 git commit -m "Initial project setup and folder structure"
 git commit -m "Added database schema and connection configuration"
 git commit -m "Implemented user authentication (login/logout/session)"
