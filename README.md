@@ -147,7 +147,7 @@ git checkout main
 git merge development
 
 # Push to GitHub
-git remote add origin https://github.com/nova0408-glitch/OpenSource_Assignment_ComputerScience_Group1.git
+git remote add origin https://github.com/nova0408-glitch/OpenSource_Assignment_Bsc-CS2_Group_04.git
 git push -u origin main
 ```
 
@@ -155,7 +155,7 @@ git push -u origin main
 
 ## 🔗 GitHub Repository
 
-**[https://github.com/nova0408-glitch/OpenSource_Assignment_ComputerScience_Group1](https://github.com/nova0408-glitch/OpenSource_Assignment_ComputerScience_Group1)**
+**[https://github.com/nova0408-glitch/OpenSource_Assignment_Bsc-CS2_Group_04](https://github.com/nova0408-glitch/OpenSource_Assignment_Bsc_CS2_Group_04)**
 
 ---
 
