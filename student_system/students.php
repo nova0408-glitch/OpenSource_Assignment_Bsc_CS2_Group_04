@@ -1,11 +1,8 @@
 <?php
 require_once 'includes/auth_guard.php';
 require_once 'includes/db_connect.php';
-
 $success = '';
 $error   = '';
-
-// Handle delete
 if (isset($_GET['delete'])) {
     $del_id = (int)$_GET['delete'];
     if (mysqli_query($conn, "DELETE FROM students WHERE id = $del_id")) {
@@ -14,8 +11,6 @@ if (isset($_GET['delete'])) {
         $error = "Could not delete the record. Please try again.";
     }
 }
-
-// Filter
 $level_filter = isset($_GET['level']) ? $_GET['level'] : '';
 $where = '';
 if ($level_filter === 'Primary' || $level_filter === 'Secondary') {
@@ -47,8 +42,6 @@ $count = mysqli_num_rows($students);
     <?php if ($error): ?>
         <div class="alert alert-error">❌ <?php echo htmlspecialchars($error); ?></div>
     <?php endif; ?>
-
-    <!-- Filters + Add button -->
     <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-bottom:18px;">
         <div style="display:flex; gap:8px;">
             <a href="students.php" class="btn btn-secondary <?php echo !$level_filter ? 'active' : ''; ?>">All (<?php echo mysqli_fetch_row(mysqli_query($conn, "SELECT COUNT(*) FROM students"))[0]; ?>)</a>
