@@ -1,7 +1,6 @@
 <?php
 require_once 'includes/auth_guard.php';
 require_once 'includes/db_connect.php';
-
 if (isset($_GET['export'])) {
     header('Content-Type: text/csv; charset=utf-8');
     header('Content-Disposition: attachment; filename="students_export.csv"');
