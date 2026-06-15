@@ -1,14 +1,10 @@
 <?php
 require_once 'includes/auth_guard.php';
 require_once 'includes/db_connect.php';
-
-// Fetch summary stats
 $total_students   = mysqli_fetch_row(mysqli_query($conn, "SELECT COUNT(*) FROM students"))[0];
 $primary_students = mysqli_fetch_row(mysqli_query($conn, "SELECT COUNT(*) FROM students WHERE school_level='Primary'"))[0];
 $secondary_students = mysqli_fetch_row(mysqli_query($conn, "SELECT COUNT(*) FROM students WHERE school_level='Secondary'"))[0];
 $total_regions    = mysqli_fetch_row(mysqli_query($conn, "SELECT COUNT(DISTINCT region) FROM students"))[0];
-
-// Fetch last 5 registered students
 $recent = mysqli_query($conn, "SELECT * FROM students ORDER BY registered_at DESC LIMIT 5");
 ?>
 <!DOCTYPE html>
@@ -25,8 +21,6 @@ $recent = mysqli_query($conn, "SELECT * FROM students ORDER BY registered_at DES
 
 <div class="container">
     <h2 class="section-title">📊 Dashboard</h2>
-
-    <!-- Summary Cards -->
     <div class="dashboard-cards">
         <div class="card">
             <div class="card-icon">👩‍🎓</div>
@@ -49,8 +43,6 @@ $recent = mysqli_query($conn, "SELECT * FROM students ORDER BY registered_at DES
             <div class="card-label">Regions Covered</div>
         </div>
     </div>
-
-    <!-- Recent Registrations -->
     <div class="table-box">
         <h3 class="section-title">🕐 Recently Registered Students</h3>
         <?php if (mysqli_num_rows($recent) > 0): ?>
