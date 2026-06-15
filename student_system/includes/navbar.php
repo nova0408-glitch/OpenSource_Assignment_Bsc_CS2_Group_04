@@ -1,5 +1,4 @@
 <?php
-// Shared navigation bar
 $current_page = basename($_SERVER['PHP_SELF']);
 ?>
 <div class="navbar">
