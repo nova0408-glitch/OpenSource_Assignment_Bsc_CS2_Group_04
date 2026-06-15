@@ -2,7 +2,6 @@
 require_once 'includes/auth_guard.php';
 require_once 'includes/db_connect.php';
 
-// Admin only
 if ($_SESSION['role'] !== 'admin') {
     header("Location: index.php");
     exit();
@@ -11,7 +10,6 @@ if ($_SESSION['role'] !== 'admin') {
 $success = '';
 $error   = '';
 
-// Handle add new user
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['action'] === 'add_user') {
     $new_username  = trim($_POST['new_username']);
     $new_fullname  = trim($_POST['new_fullname']);
@@ -34,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
     }
 }
 
-// Handle delete user
+
 if (isset($_GET['delete_user'])) {
     $del_id = (int)$_GET['delete_user'];
     if ($del_id === $_SESSION['user_id']) {
@@ -70,7 +68,6 @@ $users = mysqli_query($conn, "SELECT * FROM users ORDER BY created_at DESC");
         <div class="alert alert-error">❌ <?php echo htmlspecialchars($error); ?></div>
     <?php endif; ?>
 
-    <!-- Add New User Form -->
     <div class="form-box">
         <h3 style="margin-bottom:18px; font-size:1.1rem; color:#1a6b3c;">➕ Add New User</h3>
         <form method="POST" action="users.php">
@@ -100,7 +97,6 @@ $users = mysqli_query($conn, "SELECT * FROM users ORDER BY created_at DESC");
         </form>
     </div>
 
-    <!-- Users Table -->
     <div class="table-box">
         <h3 style="margin-bottom:15px; font-size:1.1rem; color:#1a6b3c;">📋 Registered System Users</h3>
         <table>
