@@ -58,9 +58,53 @@ The system includes a full **user management module** with role-based access (Ad
 ### Prerequisites
 - XAMPP or WAMP installed (PHP + MySQL + Apache)
 - Git installed
+- ---
 
-### Steps
+1.Download / Clone the Project
+-Open your terminal (or Git Bash) and run:
+```bash
+git clone https://github.com/nova0408-glitch/OpenSource_Assignment_Bsc_CS2_Group_04.git
+```
+2.Copy Files to XAMPP
+-Copy the entire student_system folder into XAMPP’s htdocs directory:<br>
+```bash
+C:\xampp\htdocs\student_system
+```
+3.Start XAMPP Services<br>
+-Open XAMPP Control Panel.<br>
+-Start Apache and MySQL.
+<br> 
+<br>
+4.Create the Database<br>
+-Open your browser and go to: http://localhost/phpmyadmin<br>
+-Click on New → Create a database named school_db.<br>
+-Select the school_db database → Click Import tab.<br>
+-Choose the file: student_system/db/school_db.sql<br>
+-Click Import at the bottom.
+<br> 
+<br>
+5.Run the Application<br>
+Open your browser and go to:<br>
+```bash
+http://localhost/student_system/
+```
+---
+### Git Commands Used
+```bash
+git init
+git add . 
+git commit -m "Initial commit - Project setup" 
+git commit -m "Added student registration and display features" 
+git commit -m "Implemented search functionality" 
+git commit -m "Added user management module"
+git checkout -b development 
+git commit -m "Added CSV export feature for students"
+git checkout main 
+git merge development --no-ff -m "Merged development branch with CSV export feature" 
+git push origin main 
+git push origin development
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/nova0408-glitch/OpenSource_Assignment_Bsc_CS2_Group_04.git
+```
+---
+### 🔗 GitHub Repository Link
+https://github.com/nova0408-glitch/OpenSource_Assignment_Bsc_CS2_Group_04
