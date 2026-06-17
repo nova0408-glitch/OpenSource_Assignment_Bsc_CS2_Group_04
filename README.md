@@ -5,6 +5,7 @@
 
 ---
 
+![SIMSscreenshot](a.png)
 ## 📌 Project Overview
 
 The **School Student Information Management System (SIMS)** is a PHP-based web application designed to manage student records for **primary and secondary schools in Tanzania**. It allows administrators and teachers to register students, browse all student records, and quickly search for a student by their registration number or other details.
