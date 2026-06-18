@@ -1,6 +1,6 @@
 # 🏫 School Student Information Management System (SIMS)
 
-> **CP 222 – Open Source Technologies | University of Dodoma (UDOM)**  
+> ** Open Source Technologies | University of Dodoma (UDOM)**  
 > College of Informatics and Virtual Education (CIVE)
 
 ---
