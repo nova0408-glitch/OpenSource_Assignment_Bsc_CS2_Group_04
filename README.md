@@ -107,5 +107,3 @@ git push origin development
 
 ```
 ---
-### 🔗 GitHub Repository Link
-https://github.com/nova0408-glitch/OpenSource_Assignment_Bsc_CS2_Group_04
